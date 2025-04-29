@@ -75,7 +75,15 @@ export function toggleTimer() {
   }
 }
 
-function advanceToNextRound() {
+export function advanceToNextRound() {
+  const rounds = document.querySelectorAll("#rounds-container .round-row");
+  
+  if (currentRound >= rounds.length) {
+    stopTimer();
+    console.log("Konec kol.");
+    return;
+  }
+  
   currentRound++;
   setRound(currentRound);
 }
