@@ -3,10 +3,8 @@ import { createBlindRounds, addNewRound, addNewPause, applyGlobalTime, reindexRo
 import { openForm, saveBlinds } from "./modules/modal";
 import { initLoader } from "./modules/loader";
 
-// Inicializace loaderu
 initLoader();
 
-// Po načtení dokumentu
 window.addEventListener("DOMContentLoaded", () => {
   createBlindRounds();
 
@@ -28,11 +26,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
   if (blindForm && bottomControls) {
     blindForm.addEventListener("show.bs.modal", () => {
-      bottomControls.classList.remove("d-none"); // zobrazit footer při otevření modálu
+      bottomControls.classList.remove("d-none");
     });
 
     blindForm.addEventListener("hide.bs.modal", () => {
-      bottomControls.classList.add("d-none"); // schovat footer při zavření modálu
+      bottomControls.classList.add("d-none");
     });
   }
 
