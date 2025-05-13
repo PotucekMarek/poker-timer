@@ -8,8 +8,8 @@
   <link rel="icon" type="image/x-icon" href="/poker-timer/favicon.ico" />
   <title>Poker Timer</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <script type="module" crossorigin src="/poker-timer/assets/index-BjW1acKR.js"></script>
-  <link rel="stylesheet" crossorigin href="/poker-timer/assets/index-AVHqTXjQ.css">
+  <script type="module" crossorigin src="/poker-timer/assets/index-BzAPEb7M.js"></script>
+  <link rel="stylesheet" crossorigin href="/poker-timer/assets/index-DzN5ZXww.css">
 </head>
 
 <body class="bg-black text-white">
@@ -43,7 +43,8 @@
     <div class="modal-dialog modal-fullscreen">
       <div class="modal-content text-white bg-dark">
         <div class="modal-header border-0">
-          <h2 class="modal-title">Set Rounds</h2>
+          <h1 class="modal-title">Set your rounds</h1>
+          <p id="roundCountDisplay" class="mb-0 ms-2 "></p>
           <div class="d-flex align-items-center gap-3 ms-auto">
             <button id="saveBlinds" type="button" class="btn btn-outline-light save-icon-btn" title="Uložit změny">
               <i class="bi bi-save-fill"></i>
@@ -57,17 +58,17 @@
             <div class="container">
               <div class="row g-4">
                 <div class="col-12 col-md-6" id="rounds-container"></div>
-
-                <div class="mb-4">
-                  <label class="form-label">Set time for all rounds</label>
-                  <div class="input-group">
-                    <input type="number" id="globalTimeInput" class="form-control text-center" min="1" value="10" />
-                    <button id="applyGlobalTimeBtn" type="button" class="btn btn-outline-primary">Use for all</button>
-                  </div>
+              </div>
+            
+              <div class="mb-4 mt-4">
+                <label class="form-label">Set time for all rounds</label>
+                <div class="input-group">
+                  <input type="number" id="globalTimeInput" class="form-control text-center" min="1" value="10" />
+                  <button id="applyGlobalTimeBtn" type="button" class="btn btn-outline-primary">Use for all</button>
                 </div>
-
               </div>
             </div>
+            
           </form>
 
           <footer id="bottom-controls" class="d-none">
@@ -90,5 +91,5 @@
 
 
   
-  </body>
+</body>
 </html>
