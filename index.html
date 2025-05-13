@@ -8,8 +8,8 @@
   <link rel="icon" type="image/x-icon" href="/poker-timer/favicon.ico" />
   <title>Poker Timer</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <script type="module" crossorigin src="/poker-timer/assets/index-BzAPEb7M.js"></script>
-  <link rel="stylesheet" crossorigin href="/poker-timer/assets/index-DzN5ZXww.css">
+  <script type="module" crossorigin src="/poker-timer/assets/index-lx6Gvnxy.js"></script>
+  <link rel="stylesheet" crossorigin href="/poker-timer/assets/index-6AxpaL8u.css">
 </head>
 
 <body class="bg-black text-white">
@@ -42,16 +42,20 @@
   <div class="modal fade" id="blindForm" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
       <div class="modal-content text-white bg-dark">
-        <div class="modal-header border-0">
-          <h1 class="modal-title">Set your rounds</h1>
-          <p id="roundCountDisplay" class="mb-0 ms-2 "></p>
-          <div class="d-flex align-items-center gap-3 ms-auto">
+        <div class="modal-header border-0 flex-wrap flex-md-nowrap justify-content-between align-items-center">
+          <div class="d-flex flex-column flex-md-row align-items-start gap-2">
+            <h1 class="modal-title mb-0">Set your rounds</h1>
+            <p id="roundCountDisplay" class="mb-0">Total rounds created: 12</p>
+          </div>
+        
+          <div class="d-flex align-items-center gap-3 mt-3 mt-md-0">
             <button id="saveBlinds" type="button" class="btn btn-outline-light save-icon-btn" title="Uložit změny">
               <i class="bi bi-save-fill"></i>
             </button>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Zavřít"></button>
           </div>
         </div>
+        
 
         <div class="modal-body overflow-auto">
           <form id="blindFormElement">
