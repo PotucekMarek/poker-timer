@@ -65,8 +65,8 @@ body {
 .pause-button {
   position: fixed;
   bottom: 2vh;
-  left: 50%;
-  font-size: 4vw;
+  left: 47%;
+  font-size: 7rem;
   color: white;
   z-index: 1000;
 }
@@ -453,6 +453,8 @@ body.loaded #loader {
   }
 
   .pause-button {
-    font-size: 4vw;
+    position: fixed;
+    left: 49%;
+    font-size: 5rem;
   }
 }
