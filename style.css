@@ -333,7 +333,7 @@ body.loaded #loader {
 @media (max-width: 1024px) {
   
 .pause-button {
-    font-size: 4vw;
+  font-size: 5rem;
   }
 
 .save-icon-btn {
