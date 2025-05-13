@@ -30,7 +30,8 @@ export function saveBlinds() {
 
     const pauseInput = firstRound.querySelector("input[type=number]") as HTMLInputElement;
     seconds = (Number(pauseInput?.value) || 10) * 60;
-  } else {
+  } 
+  else {
     const smallBlind = firstRound.querySelector("input[id^='small']") as HTMLInputElement;
     const bigBlind = firstRound.querySelector("input[id^='big']") as HTMLInputElement;
     const timeInput = firstRound.querySelector("input[id^='time']") as HTMLInputElement;
@@ -54,7 +55,7 @@ export function saveBlinds() {
   showSaveMessage();
 
   const modal = document.getElementById("blindForm");
-  if (modal) bootstrap.Modal.getInstance(modal)?.hide();
+  if (modal) bootstrap.Modal.getInstance(modal)?.hide(); // GPT
 }
 
 // GPT
@@ -72,5 +73,5 @@ function showSaveMessage() {
 function formatTime(seconds: number): string {
   const minutes = Math.floor(seconds / 60);
   const remainingSeconds = seconds % 60;
-  return `${String(minutes).padStart(2, "0")}:${String(remainingSeconds).padStart(2, "0")}`;
+  return `${String(minutes).padStart(2, "0")}:${String(remainingSeconds).padStart(2, "0")}`; // GPT
 }

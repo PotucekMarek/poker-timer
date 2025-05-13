@@ -1,4 +1,4 @@
-//Almost whole page wrote GPT
+//I got huge help by GPT with almost all functions here
 
 import { setRoundSeconds } from "./timer";
 
@@ -15,6 +15,8 @@ export function createBlindRounds() {
       createPauseRound();
     }
   }
+
+  updateRoundCountDisplay();
 }
 
 export function createStandardRound(i: number) {
@@ -46,10 +48,10 @@ export function createStandardRound(i: number) {
       </div>
     </div>
     <div class="round-column">
-      <label class="form-label">Čas (minuty)</label>
+      <label class="form-label">Time (minutes)</label>
       <div class="input-group">
         <input type="number" class="form-control text-center" id="time${i}" min="1" value="${defaultTime}" />
-        <button type="button" class="btn btn-outline-danger ms-2" onclick="this.closest('.round-row')?.remove(); reindexRounds();">
+        <button type="button" class="btn btn-outline-danger ms-2" onclick="this.closest('.round-row')?.remove(); reindexRounds(); updateRoundCountDisplay();">
           🗑️
         </button>
       </div>
@@ -78,7 +80,7 @@ export function createPauseRound() {
       <label class="form-label">Čas (minuty)</label>
       <div class="input-group">
         <input type="number" class="form-control text-center" id="${pauseId}" min="1" value="10" />
-        <button type="button" class="btn btn-outline-danger ms-2" onclick="this.closest('.round-row')?.remove(); reindexRounds();">
+        <button type="button" class="btn btn-outline-danger ms-2" onclick="this.closest('.round-row')?.remove(); reindexRounds(); updateRoundCountDisplay();">
           🗑️
         </button>
       </div>
@@ -92,11 +94,13 @@ export function addNewRound() {
   const rounds = document.querySelectorAll("#rounds-container .round-row").length;
   createStandardRound(rounds + 1);
   reindexRounds();
+  updateRoundCountDisplay();
 }
 
 export function addNewPause() {
   createPauseRound();
   reindexRounds();
+  updateRoundCountDisplay();
 }
 
 export function applyGlobalTime() {
@@ -126,6 +130,7 @@ export function reindexRounds() {
       }
     }
   });
+  updateRoundCountDisplay();
 }
 
 export function setRound(index: number) {
@@ -161,4 +166,18 @@ export function setRound(index: number) {
   }
 
   setRoundSeconds(seconds);
+}
+
+export function updateRoundCountDisplay() {
+  const display = document.getElementById("roundCountDisplay");
+  if (!display) return;
+
+  const allRounds = document.querySelectorAll("#rounds-container .round-row");
+  let count = 0;
+
+  allRounds.forEach(row => {
+    if (!row.hasAttribute("data-pause")) count++;
+  });
+
+  display.textContent = `Total rounds created: ${count}`;
 }
