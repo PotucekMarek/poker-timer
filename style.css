@@ -332,8 +332,17 @@ body.loaded #loader {
 
 @media (max-width: 1024px) {
   
-.pause-button {
-  font-size: 5rem;
+  .pause-button {
+    font-size: clamp(3rem, 12vw, 7rem);
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    bottom: 2vh;
+    z-index: 1000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
 .save-icon-btn {
@@ -379,10 +388,6 @@ body.loaded #loader {
     width: 100%;
   }
 
-  #roundCountDisplay {
-    margin-top: 0.5rem;
-  }
-
 
   #bottom-controls {
     position: fixed;
@@ -390,7 +395,7 @@ body.loaded #loader {
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.9);
-    padding: 1rem 2rem;
+    padding: 3rem 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -401,7 +406,7 @@ body.loaded #loader {
   }
 
   #bottom-controls button {
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-size: clamp(1.2rem, 2.5vw, 1.2rem);
     max-width: 250px;
     flex: 1 1 auto;
   }
@@ -441,6 +446,19 @@ body.loaded #loader {
     padding: 1rem;
     padding-bottom: 180px;
   }
+
+  .pause-button {
+    font-size: clamp(3rem, 12vw, 7rem);
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    bottom: 2vh;
+    z-index: 1000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media (min-width: 2000px) {
@@ -455,6 +473,6 @@ body.loaded #loader {
   .pause-button {
     position: fixed;
     left: 49%;
-    font-size: 5rem;
+    font-size: 10rem;
   }
 }
