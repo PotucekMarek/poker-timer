@@ -447,7 +447,6 @@ body.loaded #loader {
   .pause-button {
     font-size: clamp(3rem, 12vw, 7rem);
     left: 50%;
-    transform: translateX(-50%);
     position: fixed;
     bottom: 2vh;
     z-index: 1000;
